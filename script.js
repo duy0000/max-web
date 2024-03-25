@@ -1,3 +1,39 @@
+$(".slider-hidden").slick({
+  autoplay: true,
+  dot: true,
+  autoplaySpeed: 2000,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  prevArrow:
+    "<div class='icon-control-left icon-control-hidden'><i class='fa fa-angle-left' aria-hidden='true'></i></div>",
+  nextArrow:
+    "<div class='icon-control-right icon-control-hidden'><i class='fa fa-angle-right' aria-hidden='true'></i></div>",
+});
+// --------------------hiện slider ẩn
+document.addEventListener("DOMContentLoaded", function () {
+  var modalButtons = document.querySelectorAll(".btn-slider");
+  var overlay = document.getElementById("overlay_slider");
+  var modal = document.getElementById("modal_slider");
+  var closeButton = document.getElementById("close_btn_slider");
+
+  modalButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      console.log("kjdhfhd");
+
+      overlay.style.display = "block";
+      modal.style.display = "block";
+    });
+  });
+
+  closeButton.addEventListener("click", closeModal);
+
+  function closeModal() {
+    overlay.style.display = "none";
+    modal.style.display = "none";
+  }
+});
+// --------------------------------hiện câu trả lời
 window.onload = function () {
   var questions = document.querySelectorAll(".question");
 
@@ -151,7 +187,6 @@ $(".slider-ss6").slick({
   nextArrow:
     "<div class='icon-control-ss6'><i class='fa-solid fa-chevron-down'aria-hidden='true'></i></div>",
 });
-// ---------------------------------------------------------ấn mở câu trả lời
 
 // -------------------------ss9-slider
 $(".slider-ss9").slick({
