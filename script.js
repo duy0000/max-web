@@ -10,6 +10,22 @@ $(".slider-hidden").slick({
   nextArrow:
     "<div class='icon-control-right icon-control-hidden'><i class='fa fa-angle-right' aria-hidden='true'></i></div>",
 });
+// --------------------------------hiện câu trả lời
+
+document.addEventListener("DOMContentLoaded", function () {
+  var questions = document.querySelectorAll(".question");
+
+  questions.forEach(function (question) {
+    var id = question.querySelector("p").id;
+    var icon = question.querySelector("i.fa-solid");
+    document.getElementById(id).addEventListener("click", function () {
+      console.log("kjdhfhd");
+      question.classList.toggle("tra-loi");
+      icon.classList.toggle("fa-chevron-down");
+      icon.classList.toggle("fa-chevron-up");
+    });
+  });
+});
 // --------------------hiện slider ẩn
 document.addEventListener("DOMContentLoaded", function () {
   var modalButtons = document.querySelectorAll(".btn-slider");
