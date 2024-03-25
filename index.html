@@ -2140,13 +2140,34 @@
               </div>
             </div>
           </div>
-          <p class="copyright">
-            Coppyright © 2020 - 2023 MAXWEB Media. All rights reserved. Design
-            by Bivaco
-          </p>
+          <a href="https://bivaco.com/">
+            <p class="copyright">
+              Coppyright © 2020 - 2023 MAXWEB Media. All rights reserved. Design
+              by Bivaco
+            </p></a
+          >
         </div>
       </div>
     </footer>
+    <script>
+      // --------------------------------hiện câu trả lời
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var questions = document.querySelectorAll(".question");
+
+        questions.forEach(function (question) {
+          var id = question.querySelector("p").id;
+          var icon = question.querySelector("i.fa-solid");
+          document.getElementById(id).addEventListener("click", function () {
+            console.log("kjdhfhd");
+            question.classList.toggle("tra-loi");
+            icon.classList.toggle("fa-chevron-down");
+            icon.classList.toggle("fa-chevron-up");
+          });
+        });
+      });
+    </script>
   </body>
+
   <script src="./script.js"></script>
 </html>

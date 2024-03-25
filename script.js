@@ -33,21 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none";
   }
 });
-// --------------------------------hiện câu trả lời
-window.onload = function () {
-  var questions = document.querySelectorAll(".question");
 
-  questions.forEach(function (question) {
-    var id = question.querySelector("p").id;
-    var icon = question.querySelector("i.fa-solid");
-    document.getElementById(id).addEventListener("click", function () {
-      console.log("kjdhfhd");
-      question.classList.toggle("tra-loi");
-      icon.classList.toggle("fa-chevron-down");
-      icon.classList.toggle("fa-chevron-up");
-    });
-  });
-};
 // -------------------------mở form tim kiem
 document.addEventListener("DOMContentLoaded", function () {
   var modalButtons = document.querySelectorAll(".btn-timkiem");

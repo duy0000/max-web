@@ -180,6 +180,9 @@
   .ss3-section {
     padding-bottom: 100px;
   }
+  .ss10-section .container .row .btn-center {
+    padding-top: 20px;
+  }
 }
 @media (max-width: 767px) and (min-width: 551px) {
   .list-item-ss4 {
