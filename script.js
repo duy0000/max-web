@@ -130,22 +130,12 @@ function toggleClass(element) {
 // ----------------------------------slide-ss3
 $(".slider-ss3").slick({
   autoplay: true,
+  dots: true,
   autoplaySpeed: 2000,
+  arrows: false,
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 767,
-      settings: {
-        arrows: false,
-      },
-    },
-  ],
-  prevArrow:
-    "<div class='icon-control-left icon-control'><i class='fa fa-angle-left' aria-hidden='true'></i></div>",
-  nextArrow:
-    "<div class='icon-control-right icon-control'><i class='fa fa-angle-right' aria-hidden='true'></i></div>",
 });
 // ---------------------------------open-4tab
 document.addEventListener("DOMContentLoaded", function () {
@@ -178,23 +168,21 @@ document.addEventListener("DOMContentLoaded", function () {
 // ----------------------------------------------slide-ss6
 $(".slider-ss6").slick({
   autoplay: true,
-  dot: true,
-  appendDots: "<div class='slick-slider-dots'></div>",
+  dots: true,
   autoplaySpeed: 2000,
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   prevArrow:
-    "<div class='icon-control-ss6'><i class='fa-solid fa-chevron-up'aria-hidden='true'></i></div>",
+    "<div class='icon-control-ss6 icon-control-up'><i class='fa-solid fa-chevron-up'aria-hidden='true'></i></div>",
   nextArrow:
-    "<div class='icon-control-ss6'><i class='fa-solid fa-chevron-down'aria-hidden='true'></i></div>",
+    "<div class='icon-control-ss6 icon-control-down'><i class='fa-solid fa-chevron-down'aria-hidden='true'></i></div>",
 });
 
 // -------------------------ss9-slider
 $(".slider-ss9").slick({
   autoplay: true,
-  dot: true,
-  appendDots: "<div class='slick-slider-dots'></div>",
+  dots: true,
   autoplaySpeed: 2000,
   infinite: true,
   slidesToShow: 2,

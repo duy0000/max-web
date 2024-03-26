@@ -13,6 +13,9 @@
     background: #e81a05;
     margin: 8px 10px;
   }
+  .slider-ss9 {
+    margin: 100px 0 150px 0;
+  }
 }
 @media (min-width: 1200px) {
   /* ------------------------------------------bắt đầu css thanh nav */
@@ -341,5 +344,8 @@
   }
   .list-khach-hang div div img {
     margin-top: 30px;
+  }
+  .ss3-bottom {
+    margin-top: 150px;
   }
 }

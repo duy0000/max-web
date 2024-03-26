@@ -93,7 +93,7 @@ header {
 }
 .ss1-section {
   background-image: url("./img/thiet-ke-website-bat-dong-san.webp");
-  height: 680px;
+  height: 100vh;
   position: relative;
   margin-top: -140px;
   background-size: cover;
@@ -109,7 +109,12 @@ header {
   right: 0;
   bottom: 0%;
   content: "";
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.9) ; */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.1) 40%,
+    transparent 10%
+  );
 }
 a {
   color: #072e84;
@@ -164,6 +169,15 @@ a:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+}
+.ss3-bg-phai {
+  position: absolute;
+  top: -4%;
+  width: 12%;
+  right: 0;
+  height: 30%;
+  /* z-index: -1; */
 }
 .btn-sample {
   display: flex;
@@ -587,7 +601,8 @@ a:hover {
   color: #fff;
 }
 .ss5-section {
-  background-image: linear-gradient(
+  position: relative;
+  /* background-image: linear-gradient(
     to bottom,
     rgba(255, 0, 0, 0),
     rgb(7 46 132 / 14%)
@@ -595,7 +610,20 @@ a:hover {
   background-image: url("./img/bg-ss5-trai.png"), url("./img/bg-ss5.png");
   background-position: left bottom, right top;
   background-repeat: no-repeat, no-repeat;
-  background-size: auto, auto;
+  background-size: auto, auto; */
+}
+.ss5-img {
+  position: absolute;
+  width: 12%;
+}
+.ss5-left-img {
+  transform: translateY(50%);
+  bottom: 0;
+  left: 0;
+}
+.ss5-right-img {
+  top: -200px;
+  right: 0;
 }
 .content-ss5-bottom div {
   display: flex;
@@ -661,17 +689,69 @@ a:hover {
   width: 100%;
   height: auto;
 }
+.ss6-section .container-fluid {
+  position: relative;
+}
 .ss6-section .control .slider-ss6 .icon-control-ss6 {
   font-size: 20px;
+  position: absolute;
   width: 40px;
   height: 40px;
   border: 1px solid #e81a05;
   align-items: center;
   border-radius: 50%;
+  transform: translateX(-35%);
   display: flex;
   justify-content: center;
   color: #e81a05;
   margin: 10px 0;
+}
+.icon-control-up {
+  top: -50px;
+  left: 0;
+}
+.icon-control-down {
+  bottom: -50px;
+  left: 0;
+}
+.ss6-section .control .slider-ss6 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin: 90px 0;
+}
+.ss6-section .control .slider-ss6 .slick-dots button {
+  display: none;
+}
+.ss6-section .control .slider-ss6 .slick-dots .slick-active {
+  background-color: #e81a05;
+}
+.ss6-section .control .slider-ss6 .slick-dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-bottom: 15px;
+  cursor: pointer;
+  border: 1px solid #e81a05;
+}
+.ss6-section .control .slider-ss6 .slick-dots li::before {
+  content: "";
+  height: 15px;
+  width: 1px;
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-75%);
+  bottom: -10px;
+  border: 1px dashed red;
+}
+.ss6-section .control .slider-ss6 .slick-dots li:last-child::before {
+  display: none;
+}
+.ss6-section .control .slider-ss6 .slick-dots {
+  padding: 0;
+  margin-right: 30px;
 }
 .ss6-section .control .slider-ss6 .icon-control-ss6:hover {
   background-color: #e81a05;
@@ -695,6 +775,15 @@ a:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   width: 100%;
+}
+.img-thiet-ke-bds {
+  width: 170px;
+  height: 170px;
+  padding: auto;
+  margin: 30px 0 40px 0;
+}
+.ss7-section {
+  margin-top: 150px;
 }
 .ss8-section {
   margin: 150px 0;
@@ -722,14 +811,14 @@ a:hover {
   height: 0;
   position: relative;
   z-index: -4;
-  transition: all 0.5s ease-out;
+  transition: padding 0.5s ease-out;
+  padding: 0;
 }
 .question.tra-loi ul {
-  /* display: block; */
   padding: 15px 0px 15px 40px;
   opacity: 1;
   height: 100%;
-  transition: all 0.5s ease-out;
+  transition: padding 0.5s ease-out;
 }
 .question.tra-loi p {
   background-color: #072e84;
@@ -816,7 +905,7 @@ a:hover {
   position: relative;
 }
 .slider-ss9 {
-  margin-top: 100px;
+  margin: 100px 0 50px 0;
 }
 .slider-hidden .icon-control-hidden,
 .ss9-section .container .slider-ss9 .icon-control {
@@ -889,12 +978,31 @@ a:hover {
 /* ----------------------------------------------css-footer */
 footer {
   padding: 90px 0 0 0;
+  position: relative;
   background-color: #fef5f3;
 }
 .back-ground {
   width: 100%;
-  background: url("./img/bg-footer-bottom-right.png") right bottom no-repeat;
   height: 100%;
+}
+.chua-anh {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1300px;
+}
+.img-left-footer {
+  position: absolute;
+  top: 0;
+  width: 300px;
+  height: 317px;
+  transform: translateY(-60%);
+  right: -350px;
+}
+.back-ground .container {
+  background: url("./img/bg-footer-bottom-right.png") right bottom 90px
+    no-repeat;
+  background-size: 20%;
 }
 .back-ground .container .row .logo {
   width: 300px;
@@ -1462,4 +1570,71 @@ footer {
   z-index: -1;
   border-radius: 50%;
   background-color: #fff;
+}
+.lido-chon {
+  padding: 80px 0 0 0;
+}
+.ss7-section.container-fluid {
+  position: relative;
+}
+.cau-o-ben-trai {
+  width: 8%;
+  position: absolute;
+  bottom: -90px;
+  left: 0;
+  z-index: 7;
+}
+.ss7-phai-img {
+  position: absolute;
+  width: 11%;
+  top: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+/* ------------------------------------custom dots */
+.ss3-bottom .col-lg-6 .control .slider-ss3 .slick-dots {
+  display: flex !important;
+  justify-content: center;
+  padding: 0;
+}
+.slider-ss9 .slick-dots {
+  display: flex !important;
+  justify-content: center;
+  padding-left: 10px;
+  margin-top: 20px;
+}
+.slider-ss9 .slick-dots li button,
+.slider-ss3 .slick-dots li button {
+  display: none;
+}
+.ss3-bottom .col-lg-6 .control .slider-ss3 .slick-dots .slick-active {
+  border: none;
+  background-color: #fff;
+}
+.slider-ss9 .slick-dots .slick-active {
+  border: none;
+  background-color: #999;
+}
+
+.slider-ss3 .slick-dots li {
+  list-style: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  margin-right: 10px;
+  cursor: pointer;
+  border: 3px solid #cdcdcd;
+}
+.slider-ss9 .slick-list {
+  padding: 10px 0;
+}
+.slider-ss9 .slick-dots li {
+  list-style: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 100%;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #f3f3f3;
+  border: 1px solid #999;
 }
