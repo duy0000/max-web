@@ -1,3 +1,47 @@
+// ---------------------------------open-3tab
+document.addEventListener("DOMContentLoaded", function () {
+  var tabs = document.querySelectorAll("[id^='open-content']");
+  tabs.forEach(function (tab) {
+    // Thêm class "fa-regular"
+    tab.classList.add("fa-regular");
+    // tab.classList.add("active");
+    // Xóa class "fa-solid" nếu có
+    tab.classList.remove("fa-solid");
+    // tab.classList.remove("active");
+
+    tab.addEventListener("click", function () {
+      var tabId = this.id;
+      toggleTab(tabId);
+      tabs.forEach(function (t) {
+        if (t.id === tabId) {
+          // Thêm class "fa-solid" và xóa class "fa-regular" cho tab được chọn
+          t.classList.remove("fa-regular");
+          t.classList.add("fa-solid");
+          t.classList.add("active");
+        } else {
+          // Thêm class "fa-regular" và xóa class "fa-solid" cho các tab khác
+          t.classList.add("fa-regular");
+          t.classList.remove("fa-solid");
+          t.classList.remove("active");
+        }
+      });
+    });
+  });
+
+  function toggleTab(tabId) {
+    var tabsContent = document.querySelectorAll("[id^='tab-']");
+    tabsContent.forEach(function (tabContent) {
+      if (tabContent.id === "tab-" + tabId.slice(-1)) {
+        tabContent.classList.remove("hidden");
+      } else {
+        tabContent.classList.add("hidden");
+      }
+    });
+  }
+});
+
+// --------------------------------------slick-ẩn
+
 $(".slider-hidden").slick({
   autoplay: true,
   dot: true,

@@ -148,6 +148,48 @@
     border-right: 10px solid transparent;
     border-bottom: 10px solid #999; /* Màu và chiều cao của tam giác */
   }
+  .ss5-bottom-list,
+  .ss5-bottom-list-item i,
+  .ss5-bottom-list-item {
+    position: absolute;
+  }
+  .click-open-child {
+    padding: 60px 0 0px 0;
+  }
+  .click-open-child .ss5-bottom-list {
+    word-wrap: break-word;
+    width: 300px;
+  }
+  .ss5-bottom-list-item-1 {
+    top: -410px;
+    left: 50%;
+  }
+
+  .ss5-bottom-list-item-1 i {
+    top: 70px;
+    background-color: #fff;
+    border-radius: 100%;
+  }
+  .ss5-bottom-list-item-2 {
+    left: -400px;
+    top: -100px;
+    width: 200px;
+  }
+  .ss5-bottom-list-item-2 i {
+    border-radius: 100%;
+    left: 385px;
+    background-color: #fff;
+  }
+  .ss5-bottom-list-item-3 {
+    right: -440px;
+    width: 200px;
+    top: 100px;
+  }
+  .ss5-bottom-list-item-3 i {
+    border-radius: 100%;
+    right: 315px;
+    background-color: #fff;
+  }
 }
 /* .
 .
@@ -183,6 +225,9 @@
     grid-template-columns: repeat(1, 1fr);
     margin-top: 40px;
   }
+  #modal_timkiem {
+    width: 95% !important;
+  }
 }
 @media (max-width: 767px) {
   .ss3-section {
@@ -199,6 +244,9 @@
     grid-template-columns: repeat(2, 1fr);
     margin-top: 40px;
   }
+  #modal_timkiem {
+    width: 80% !important;
+  }
 }
 @media (max-width: 990px) and (min-width: 766px) {
   .list-item-ss4 {
@@ -206,6 +254,9 @@
     gap: 30px;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 40px;
+  }
+  #modal_timkiem {
+    width: 70% !important;
   }
 }
 @media (max-width: 1200px) {
@@ -347,5 +398,8 @@
   }
   .ss3-bottom {
     margin-top: 150px;
+  }
+  #modal_timkiem {
+    width: 70% !important;
   }
 }
