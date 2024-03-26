@@ -190,6 +190,11 @@
     right: 315px;
     background-color: #fff;
   }
+  .btn-sample {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+  }
 }
 /* .
 .
@@ -208,14 +213,16 @@
 .
 .
 . */
-@media (max-width: 550px) {
+@media (max-width: 440px) {
   .header-bottom .list-header-bottom #menu .close-nav-mb {
     position: absolute;
     right: 20px;
     top: 20px;
-    color: #e81a05;
+    color: #072e84;
     z-index: 999;
   }
+}
+@media (max-width: 550px) {
   #modal {
     width: 100%;
   }

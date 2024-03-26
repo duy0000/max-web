@@ -183,8 +183,9 @@ a:hover {
 }
 .btn-sample {
   display: flex;
-  justify-content: center;
-  overflow: auto;
+  /* justify-content: center; */
+  overflow: scroll;
+  scrollbar-width: none;
 }
 .btn-sample div {
   font-weight: 700;
@@ -564,6 +565,10 @@ a:hover {
 }
 .price-ss4 {
   text-align: center;
+  padding: 10px 0;
+}
+.price-ss4 p {
+  margin: 5px 0;
 }
 .price-ss4 p:nth-child(1) {
   color: #072e84;
@@ -828,7 +833,7 @@ a:hover {
 .question.tra-loi p {
   background-color: #072e84;
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
   transition: all 1s;
 }
 .ss9-section {
@@ -983,6 +988,7 @@ a:hover {
 /* ----------------------------------------------css-footer */
 footer {
   padding: 90px 0 0 0;
+  overflow: hidden;
   position: relative;
   background-color: #fef5f3;
 }
