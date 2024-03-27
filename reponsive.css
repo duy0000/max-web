@@ -241,9 +241,9 @@
   }
 }
 @media (max-width: 767px) {
-  .ss3-section {
+  /* .ss3-section {
     padding-bottom: 100px;
-  }
+  } */
   .ss10-section .container .row .btn-center {
     padding-top: 20px;
   }
@@ -254,6 +254,35 @@
   .ss9-section .icon-control-left {
     left: 0px;
     font-size: 20px;
+  }
+  .ss3-section {
+    padding: 30px 0 50px 0;
+    background-image: url("./img/bg-ss3.webp");
+    background-size: cover;
+    background-position: inherit;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .content p:first-child span {
+    color: #e81a05;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .content p:first-child {
+    text-align: center;
+    color: #072e84;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+  }
+  .click-open-child .css-li.col-12.ss5-bottom-list li:nth-child(2) {
+    margin: 25px 4px 25px 0;
+  }
+  .click-open-child .css-li.col-12.ss5-bottom-list li div {
+    font-size: 16px;
+  }
+  .lido-chon {
+    padding-top: 0px;
   }
 }
 @media (max-width: 767px) and (min-width: 551px) {
@@ -342,10 +371,13 @@
     color: #fff;
     font-size: 20px;
   }
-  .fixed .header-bottom .css-li i,
-  .fixed .header-bottom .css-li a,
-  .fixed .header-bottom .open-nav-mb i {
-    color: #072e84;
+  .header-bottom .list-header-bottom #menu .list-select .css-li div i,
+  .header-bottom .list-header-bottom #menu .list-select .css-li div a,
+  .header-bottom .list-header-bottom #menu .list-select .css-li .list-lv1 li a {
+    color: #999;
+  }
+  .header-bottom .list-header-bottom #menu .list-select .css-li .list-lv1 {
+    padding-left: 15px;
   }
   #menu {
     position: fixed;
@@ -359,16 +391,19 @@
   }
   .list-select {
     display: flex;
+
     flex-direction: column;
     background-color: #fff;
     max-width: 400px;
     padding: 30px 0;
+    height: 100vh;
     /* position: relative;
     z-index: 100; */
   }
-  .list-select li a i,
-  .list-select li i {
+  .fixed .btn-timkiem a i,
+  .fixed .header-bottom .open-nav-mb i {
     color: #072e84;
+    /* color: #999; */
   }
   .list-select li {
     display: flex;
@@ -390,9 +425,7 @@
   .fixed .list-header-bottom .list-select li {
     padding: 10px 20px;
   }
-  .fixed .list-header-bottom .list-select div li:hover,
-  .header-bottom div .list-select li div:hover,
-  .list-header-bottom .list-select div li:hover {
+  .list-header-bottom .list-select .css-li:hover {
     background-color: #f2f2f2;
   }
   .fixed .list-header-bottom .list-select li i,
