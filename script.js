@@ -298,3 +298,63 @@ window.onload = function () {
     });
   });
 };
+//
+// Function to show hidden image corresponding to clicked image
+function showHiddenImage(imageId) {
+  // Hide previously visible hidden images
+  const previousHiddenImages = document.querySelectorAll(".slide.hidden");
+  previousHiddenImages.forEach((hiddenImage) => {
+    hiddenImage.classList.add("hidden");
+  });
+  // Show the corresponding hidden image
+  const hiddenImage = document.getElementById(`img-hidden-${imageId}`);
+  if (hiddenImage) {
+    hiddenImage.classList.remove("hidden");
+  }
+
+  // Hide all other hidden images
+  const allHiddenImages = document.querySelectorAll("[id^='img-hidden-']");
+  allHiddenImages.forEach((img) => {
+    if (img.id !== `img-hidden-${imageId}`) {
+      img.classList.add("hidden");
+    }
+  });
+}
+
+// Event listener for clicking on images in the slider
+const sliders = document.querySelectorAll(".btn-slider");
+sliders.forEach((slider, index) => {
+  const imageId = index + 1;
+  slider.addEventListener("click", () => {
+    showHiddenImage(imageId);
+  });
+});
+// Function to show next slide
+function showNextSlide() {
+  const currentVisibleImage = document.querySelector(".slide:not(.hidden)");
+  let nextHiddenImage = currentVisibleImage.nextElementSibling;
+  if (!nextHiddenImage) {
+    nextHiddenImage = document.querySelector(".slide.hidden");
+  }
+  currentVisibleImage.classList.add("hidden");
+  nextHiddenImage.classList.remove("hidden");
+}
+
+// Function to show previous slide
+function showPrevSlide() {
+  const currentVisibleImage = document.querySelector(".slide:not(.hidden)");
+  let prevHiddenImage = currentVisibleImage.previousElementSibling;
+  if (!prevHiddenImage) {
+    const allSlides = document.querySelectorAll(".slide");
+    prevHiddenImage = allSlides[allSlides.length - 1];
+  }
+  currentVisibleImage.classList.add("hidden");
+  prevHiddenImage.classList.remove("hidden");
+}
+
+// Event listeners for clicking on next and previous buttons
+const nextButton = document.querySelector(".icon-control-right");
+const prevButton = document.querySelector(".icon-control-left");
+
+nextButton.addEventListener("click", showNextSlide);
+prevButton.addEventListener("click", showPrevSlide);

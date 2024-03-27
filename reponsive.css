@@ -16,6 +16,11 @@
   .slider-ss9 {
     margin: 100px 0 150px 0;
   }
+  .btn-sample {
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+  }
 }
 @media (min-width: 1200px) {
   /* ------------------------------------------bắt đầu css thanh nav */
@@ -160,6 +165,10 @@
     word-wrap: break-word;
     width: 300px;
   }
+  .click-open-child img {
+    height: 750px;
+    width: auto;
+  }
   .ss5-bottom-list-item-1 {
     top: -410px;
     left: 50%;
@@ -189,11 +198,6 @@
     border-radius: 100%;
     right: 315px;
     background-color: #fff;
-  }
-  .btn-sample {
-    display: flex;
-    justify-content: center;
-    overflow: auto;
   }
 }
 /* .
@@ -243,6 +247,14 @@
   .ss10-section .container .row .btn-center {
     padding-top: 20px;
   }
+  .ss9-section .icon-control-right {
+    right: 0px;
+    font-size: 20px;
+  }
+  .ss9-section .icon-control-left {
+    left: 0px;
+    font-size: 20px;
+  }
 }
 @media (max-width: 767px) and (min-width: 551px) {
   .list-item-ss4 {
@@ -264,6 +276,33 @@
   }
   #modal_timkiem {
     width: 70% !important;
+  }
+}
+@media (max-width: 991px) {
+  .btn-sample .suggest {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(7, 46, 132, 0.5);
+    /* transform: translateX(100%); */
+    animation: slideRight 2s linear infinite;
+    pointer-events: none;
+  }
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  .hidden-991 {
+    display: none !important;
   }
 }
 @media (max-width: 1200px) {
@@ -408,5 +447,12 @@
   }
   #modal_timkiem {
     width: 70% !important;
+  }
+  .phan-loai-website {
+    min-width: 100%;
+    height: auto;
+  }
+  .click-open-child {
+    overflow: hidden;
   }
 }

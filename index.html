@@ -363,7 +363,7 @@
         </div>
       </section>
       <section class="ss3-section">
-        <div class="ss3-bg-phai">
+        <div class="ss3-bg-phai hidden-991">
           <img src="./img/ss3-bg-phai.png" alt="" />
         </div>
         <div class="container">
@@ -912,12 +912,16 @@
               <p id="open-tab-3" class="pointer">WEB NHIỀU DỰ ÁN (SÀN BĐS)</p>
               <p id="open-tab-4" class="pointer">WEB ĐĂNG TIN</p>
             </div>
+            <div class="suggest">
+              <i class="fa-solid fa-chevron-right"></i>
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
           </div>
 
           <div id="tab1" class="open-tab-1">
             <div class="list-item-ss4">
               <div class="item-ss4">
-                <div class="img-item-ss4 sale-ss4">
+                <div class="img-item-ss4 hot-ss4">
                   <div><img src="./img/ss4-list-1.webp" alt="" /></div>
                   <div class="list-btn">
                     <a href="#" class="btn-chitiet">
@@ -1529,7 +1533,11 @@
         </div>
         <div class="click-open-child row">
           <div class="col-12">
-            <img src="./img/Phan-loai-website-bat-dong-san-ss5.png" alt="" />
+            <img
+              class="phan-loai-website"
+              src="./img/Phan-loai-website-bat-dong-san-ss5.png"
+              alt=""
+            />
           </div>
           <ul class="css-li col-12 ss5-bottom-list">
             <li class="ss5-bottom-list-item ss5-bottom-list-item-1">
@@ -1732,7 +1740,11 @@
               </div>
             </div>
           </div>
-          <img class="cau-o-ben-trai" src="./img/cau-o-ben-trai.png" alt="" />
+          <img
+            class="cau-o-ben-trai hidden-991"
+            src="./img/cau-o-ben-trai.png"
+            alt=""
+          />
         </div>
       </section>
       <section class="container lido-chon">
@@ -1800,7 +1812,11 @@
         </div>
       </section>
       <section class="ss7-section container-fluid">
-        <img class="ss7-phai-img" src="./img/Group-6748.png" alt="" />
+        <img
+          class="hidden-991 ss7-phai-img"
+          src="./img/Group-6748.png"
+          alt=""
+        />
         <div class="container">
           <div class="content my-5">
             <p>TOP #1 CÔNG TY THIẾT KẾ WEBSITE BĐS UY TÍN ĐƯỢC TIN TƯỞNG BỞI</p>
@@ -1811,32 +1827,32 @@
           </div>
           <div class="row list-khach-hang">
             <div class="col-xl-2 col-lg-4 col-6 btn-slider">
-              <div>
+              <div class="slider" id="img-1">
                 <img src="./img/khach-hang-1.jpg" alt="" />
               </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-6 btn-slider">
-              <div>
+              <div class="slider" id="img-2">
                 <img src="./img/khach-hang-2.png" alt="" />
               </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-6 btn-slider">
-              <div>
+              <div class="slider" id="img-3">
                 <img src="./img/khach-hang-3.jpg" alt="" />
               </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-6 btn-slider">
-              <div>
+              <div class="slider" id="img-4">
                 <img src="./img/khach-hang-4.jpg" alt="" />
               </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-6 btn-slider">
-              <div>
+              <div class="slider" id="img-5">
                 <img src="./img/khach-hang-5.jpg" alt="" />
               </div>
             </div>
             <div class="col-xl-2 col-lg-4 col-6 btn-slider">
-              <div>
+              <div class="slider" id="img-6">
                 <img src="./img/khach-hang-6.jpg" alt="" />
               </div>
             </div>
@@ -1845,30 +1861,46 @@
       </section>
       <div id="overlay_slider">
         <i id="close_btn_slider" class="fa-solid fa-xmark pointer"></i>
-        <div id="modal_slider col-6">
-          <div class="slider-hidden list-khach-hang">
-            <div>
+        <i class="fa-solid fa-chevron-left icon-control-left"></i>
+        <i class="fa-solid fa-chevron-right icon-control-right"></i>
+        <div id="modal_slider">
+          <div class="list-khach-hang">
+            <div class="slide hidden" id="img-hidden-1">
               <img src="./img/khach-hang-1.jpg" alt="" />
+              <div class="title-bottom-img-hidden">
+                <span>logo 1</span><span>1 of 6</span>
+              </div>
             </div>
 
-            <div>
+            <div class="slide hidden" id="img-hidden-2">
               <img src="./img/khach-hang-2.png" alt="" />
+              <div class="title-bottom-img-hidden">
+                <span>logo 2</span><span>2 of 6</span>
+              </div>
             </div>
-
-            <div>
+            <div class="slide hidden" id="img-hidden-3">
               <img src="./img/khach-hang-3.jpg" alt="" />
+              <div class="title-bottom-img-hidden">
+                <span>logo 3</span><span>3 of 6</span>
+              </div>
             </div>
-
-            <div>
+            <div class="slide hidden" id="img-hidden-4">
               <img src="./img/khach-hang-4.jpg" alt="" />
+              <div class="title-bottom-img-hidden">
+                <span>logo 4</span><span>4 of 6</span>
+              </div>
             </div>
-
-            <div>
+            <div class="slide hidden" id="img-hidden-5">
               <img src="./img/khach-hang-5.jpg" alt="" />
+              <div class="title-bottom-img-hidden">
+                <span>logo 5</span><span>5 of 6</span>
+              </div>
             </div>
-
-            <div>
+            <div class="slide hidden" id="img-hidden-6">
               <img src="./img/khach-hang-6.jpg" alt="" />
+              <div class="title-bottom-img-hidden">
+                <span>logo 6</span><span>6 of 6</span>
+              </div>
             </div>
           </div>
         </div>

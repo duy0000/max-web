@@ -186,6 +186,14 @@ a:hover {
   /* justify-content: center; */
   overflow: scroll;
   scrollbar-width: none;
+  position: relative;
+}
+.form-dangky .btn-sample {
+  display: flex;
+  justify-content: center;
+  overflow: scroll;
+  scrollbar-width: none;
+  position: relative;
 }
 .btn-sample div {
   font-weight: 700;
@@ -207,6 +215,9 @@ a:hover {
   color: #fff;
   border-radius: 30px;
   margin-bottom: 0;
+}
+.btn-sample .suggest {
+  display: none;
 }
 .btn-sample p {
   padding: 10px 30px;
@@ -452,7 +463,7 @@ a:hover {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 7;
+  z-index: 3;
   color: #000;
 }
 .ss3-bottom {
@@ -489,6 +500,7 @@ a:hover {
   content: "Sale";
   width: 200px;
   height: 30px;
+  /* overflow: hidden; */
   background-color: #e81a05;
   color: #fff;
   font-weight: 700;
@@ -519,6 +531,7 @@ a:hover {
   z-index: 2;
   text-align: center;
 }
+
 .btn-chitiet,
 .btn-demo {
   position: absolute;
@@ -638,10 +651,7 @@ a:hover {
   align-items: center;
   justify-content: center;
 }
-.click-open-child img {
-  height: 750px;
-  width: auto;
-}
+
 .click-open-child .css-li li:nth-child(1) {
   font-size: 20px;
   font-weight: 700;
@@ -658,13 +668,10 @@ a:hover {
   font-size: 20px;
   font-weight: 700;
   color: #072e84;
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
+  padding-left: 8px;
 }
 .click-open-child .css-li.col-12 {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
 }
 .click-open-child .css-li.col-12 li {
   display: flex;
@@ -675,6 +682,7 @@ a:hover {
   font-size: 20px;
   font-weight: 700;
   color: #072e84;
+  margin-left: -4px;
 }
 /* .ss5-bottom-list-item-1 i{
 
@@ -841,6 +849,7 @@ a:hover {
   background-position: left;
   background-repeat: no-repeat;
   background-size: auto;
+  overflow: hidden;
 }
 .comment {
   background-color: #fff;
@@ -895,17 +904,26 @@ a:hover {
   color: #ffe351;
   text-align: end;
 }
-.slider-hidden .icon-control-left {
-  left: -40px;
-  font-size: 20px;
+#overlay_slider .icon-control-left {
+  left: 5px;
+  top: 50%;
+  font-size: 40px;
+  position: absolute;
+  color: #fff;
+  z-index: 99;
+  /* background-color: #a70005; */
 }
 .ss9-section .icon-control-left {
   left: -20px;
   font-size: 20px;
 }
-.slider-hidden .icon-control-right {
-  right: -40px;
-  font-size: 20px;
+#overlay_slider .icon-control-right {
+  right: 5px;
+  color: #fff;
+  top: 50%;
+
+  font-size: 40px;
+  position: absolute;
 }
 .ss9-section .icon-control-right {
   right: -20px;
@@ -917,7 +935,7 @@ a:hover {
 .slider-ss9 {
   margin: 100px 0 50px 0;
 }
-.slider-hidden .icon-control-hidden,
+#modal_slider .icon-control-hidden,
 .ss9-section .container .slider-ss9 .icon-control {
   position: absolute;
   top: 50%;
@@ -932,16 +950,16 @@ a:hover {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 7;
+  z-index: 3;
   opacity: 0;
   transition: opacity 1s;
 }
-.slider-hidden:hover .icon-control-hidden,
+#modal_slider:hover .icon-control-hidden,
 .ss9-section .container .slider-ss9:hover .icon-control {
   opacity: 1;
   transition: all 1s;
 }
-.slider-hidden .icon-control-hidden:hover,
+#modal_slider .icon-control-hidden:hover,
 .ss9-section .container .slider-ss9 .icon-control:hover {
   background-color: #072e84;
   transition: all 1s;
@@ -1013,7 +1031,7 @@ footer {
 .back-ground .container {
   background: url("./img/bg-footer-bottom-right.png") right bottom 90px
     no-repeat;
-  background-size: 20%;
+  background-size: 250px;
 }
 .back-ground .container .row .logo {
   width: 300px;
@@ -1098,15 +1116,22 @@ footer {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 10;
 }
-.slider-hidden {
+#modal_slider {
   width: 60% !important;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.slider-hidden div img {
+#modal_slider div img {
   background-color: #fff;
+  border-radius: 20px;
+}
+#modal_slider div div .title-bottom-img-hidden {
+  padding-top: 5px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
 }
 #modal_slider {
   display: none;
@@ -1154,7 +1179,7 @@ footer {
   top: 20px;
   right: 20px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 30px;
   color: #fff;
   z-index: 90;
 }
@@ -1594,7 +1619,7 @@ footer {
   position: absolute;
   bottom: -90px;
   left: 0;
-  z-index: 7;
+  z-index: 1;
 }
 .ss7-phai-img {
   position: absolute;
